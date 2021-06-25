@@ -14,7 +14,7 @@ export class SamuraiListComponent implements OnInit {
   ngOnInit(): void {
     this.httpClient.get<any>(this.ApiUrl, ({ withCredentials: true })).subscribe((result: any) => {
       console.log(result);
-      this.samuraiResults = result.$values;
+      this.samuraiResults = result;
     });
   }
 
